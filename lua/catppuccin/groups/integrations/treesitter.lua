@@ -169,6 +169,16 @@ If you want to stay on nvim 0.7, either disable the integration or pin catppucci
 		-- lua
 		["@constructor.lua"] = { fg = C.flamingo }, -- For constructor calls and definitions: = { } in Lua.
 
+                -- ocaml
+                ["@constructor.ocaml"] = {fg = C.flamingo},
+                ["@keyword.ocaml"] = {fg = C.peach, style = {"bold", "italic"}},
+                ["@keyword.function.ocaml"] = {fg = C.peach, bold = true, italic = true},
+                ["@keyword.import.ocaml"] = {fg = C.maroon},
+                ["@keyword.module.open.ocaml"] = {fg = C.maroon},
+                ["@keyword.module.name.ocaml"] = {fg = C.maroon},
+                ["@keyword.type.ocaml"] = {fg = C.pink},
+                ["@variable.ocaml"] = {link = "Function"}, -- functions in ocaml doesn't require parameters which makes parameterless functions show as variables
+
 		-- typescript
 		["@property.typescript"] = { fg = C.lavender, style = O.styles.properties or {} },
 		["@constructor.typescript"] = { fg = C.lavender },
